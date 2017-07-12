@@ -1,0 +1,20 @@
+<scroll-view  scroll-y class="page">
+  <view class="head" style="background-image: url({{weather.bg}})">
+
+    <view class="day" wx:for="{{weather.future}}" wx:for-item="item">
+      <view>{{item.day}}</view>
+      <view>{{item.text}}</view>
+      <view class="item">
+        <image src="../../images/weather/{{item.code1}}.png" />
+        <image src="../../images/weather/{{item.code2}}.png" /> 
+      </view>
+      <view class="temp">
+        {{item.high}}°/ {{item.low}}°
+      </view> 
+    </view>
+
+  </view>
+
+
+
+</scroll-view>

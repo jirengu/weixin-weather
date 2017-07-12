@@ -1,0 +1,67 @@
+<scroll-view  scroll-y class="page">
+  <view class="head" style="background-image: url({{weather.bg}})">
+    <view class="extra">
+      <text class="city">{{weather.city_name}}</text>
+      <text class="date">{{weather.format_last_update}}</text>
+    </view>
+    <view class="main">
+      <view class="temperature">{{weather.now.temperature}}<text>℃</text></view>
+      <view class="weather">{{weather.now.text}}</view>
+      <view class="others">
+        <view class="pm">PM25 {{weather.now.air_quality.city.pm25}}{{weather.now.air_quality.city.quality}}</view>
+        <view class="wind">风向 西南</view>
+        <view class="pm">风力 2级</view>
+        <view class="humidity">湿度 60</view>
+      </view>
+    </view> 
+    <scroll-view scroll-x  class="hourly">
+      <view class="wrap">
+        <view class="hour" wx:for="{{hourly}}" wx:for-item="item">
+          <view>{{item.format_time}}</view>
+          <image src="{{item.img}}" />
+          <view>{{item.temperature}}°</view> 
+        </view>        
+      </view>
+
+    </scroll-view> 
+  </view>
+
+  <view class="suggestion">
+    <view class="car_washing">
+      <image src="../../images/background/car_washing.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.car_washing.brief}}</view>
+        <view class="description">{{weather.today.suggestion.car_washing.details}}</view>
+      </view>
+    </view>
+    <view class="dressing">
+      <image src="../../images/background/dressing.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.dressing.brief}}</view>
+        <view class="description">{{weather.today.suggestion.dressing.details}}</view>
+      </view>
+    </view>
+    <view class="flu">
+      <image src="../../images/background/flu.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.flu.brief}}</view>
+        <view class="description">{{weather.today.suggestion.flu.details}}</view>
+      </view>
+    </view>
+    <view class="restriction">
+      <image src="../../images/background/restriction.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.restriction.brief}}</view>
+        <view class="description">{{weather.today.suggestion.restriction.details}}</view>
+      </view>
+    </view>
+    <view class="sport">
+      <image src="../../images/background/sport.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.sport.brief}}</view>
+        <view class="description">{{weather.today.suggestion.sport.details}}</view>
+      </view>
+    </view>  
+  </view>
+
+</scroll-view>

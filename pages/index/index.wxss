@@ -1,0 +1,102 @@
+
+.head {
+  color: #fff;
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.head .extra {
+  padding: 20rpx;
+}
+.head .extra::after {
+  content:'';
+  display: block;
+  clear: both;
+}
+
+.head .extra .city{
+  float: left;
+}
+
+.head .extra .date{
+  float: right;
+}
+
+.head .main {
+  text-align: center;
+}
+
+.head .main .temperature{
+  margin-top: 40rpx;
+  font-size: 120rpx;
+}
+.head .main .weather{
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+
+.head .others {
+  padding: 40rpx;
+}
+.head .others>view {
+  width: 40%;
+  margin-top: 20rpx;
+  display: inline-block;
+}
+
+.hourly {
+  border-top: 1px solid rgba(255,255,255,0.25);
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1));
+  height: 90px;
+}
+.hourly .wrap {
+  width: 1440px;
+}
+.hourly .hour {
+  width: 120rpx;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 26rpx;
+  display: inline-block;
+}
+.hourly image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.suggestion>view{
+  padding: 40rpx 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.suggestion>view:last-child{
+  border: none;
+}
+.suggestion>view::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.suggestion image{
+  width: 100rpx;
+  height: 100rpx;
+  opacity: 0.5;
+  float: left;
+}
+.suggestion .detail {
+  margin-left: 140rpx;
+}
+.suggestion .detail .title {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.suggestion .detail .description {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 1.2;
+}
